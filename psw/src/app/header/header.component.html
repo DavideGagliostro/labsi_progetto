@@ -1,0 +1,106 @@
+<style>
+  ::ng-deep .prodotti-class a{
+    text-decoration: none;
+
+  }
+  </style>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>menu</title>
+    <link rel="stylesheet" type="text/css" href="header.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+
+
+
+
+    <div class="barra">
+      <nav>
+      <div class="miologo" >
+        <a class=miologo href="home">ShopGreen&nbsp;</a>
+      </div>
+      <ul>
+        
+
+        
+
+        <li>
+          <a href="offerte" class="button">Offerte</a>
+        </li>
+        <!-- pulsante prodotti-->
+        <li>
+        <button mat-button [matMenuTriggerFor]="menuProdotti" class="mP">Prodotti</button>
+        <mat-menu #menuProdotti="matMenu" >
+          <!-- pulsante monopattini in prodotti/monopattini-->
+          <button mat-menu-item [matMenuTriggerFor]="submenuMonopattini">Monopattini</button>
+          <mat-menu #submenuMonopattini="matMenu">
+            <a href="monopattini" mat-menu-item>Nuovo</a>
+              <mat-divider></mat-divider>
+              <a href="monopattini" mat-menu-item>Usato</a>
+          </mat-menu>
+          
+          <mat-divider></mat-divider>
+          <!-- pulsante biciclette in prodotti/biciclette-->
+          <button mat-menu-item [matMenuTriggerFor]="submenuBiciclette">Biciclette</button>
+          <mat-menu #submenuBiciclette="matMenu">
+            <!-- pulsante biciclette elettriche in prodotti/biciclette/biciclette elettriche-->
+            <button mat-menu-item [matMenuTriggerFor]="submenuElettriche">Biciclette Elettriche</button>
+            <mat-menu #submenuElettriche="matMenu">
+              <a href="biciclette/biciclette-elettriche" mat-menu-item>Nuovo</a>
+              <mat-divider></mat-divider>
+              <a href="biciclette/biciclette-elettriche" mat-menu-item>Usato</a>
+            </mat-menu> 
+            <mat-divider></mat-divider>
+            <!-- pulsante biciclette a pedali in prodotti/biciclette/biciclette a pedali-->
+            <button mat-menu-item [matMenuTriggerFor]="submenuPedali">Biciclette a pedali</button>
+            <mat-menu #submenuPedali="matMenu">
+              <a href="biciclette/biciclette-pedali" mat-menu-item>Nuovo</a>
+              <mat-divider></mat-divider>
+              <a href="biciclette/biciclette-pedali" mat-menu-item>Usato</a>
+            </mat-menu> 
+          </mat-menu> 
+        </mat-menu>
+      </li>
+      
+      <!--pulsante info con chi siamo e dove siamo-->
+      <li>
+      <button mat-button [matMenuTriggerFor]="info" class="mP">Info</button>
+        <mat-menu #info="matMenu" >
+          <a href="chiSiamo" mat-menu-item>Chi siamo</a>
+          <mat-divider></mat-divider>
+          <a href="doveSiamo" mat-menu-item>Dove siamo</a>
+        </mat-menu>
+      </li>
+
+
+
+      
+
+
+
+    
+
+      </ul>
+      <div class="ricerca"> 
+        <form action="">
+          <input type="text" placeholder="Digita qui..." name="search">
+          <button type="submit"><i class="fa fa-search"  aria-hidden="true"></i></button>
+        </form>
+      </div>
+      <div class="account"> 
+        <form action="">
+          <button type="account"><i class="fa fa-user"  aria-hidden="true"></i>
+            <span class="material-icons"></span>
+            <span class="icon-button_badge">2</span>
+          </button>
+        </form>
+      </div>
+      
+    
+    </nav>
+    </div>
+
+
+</html>

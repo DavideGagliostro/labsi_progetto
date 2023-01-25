@@ -1,0 +1,38 @@
+spring:
+  security:
+    oauth2:
+      resource-server:
+        jwt:
+          jwk-set-uri: http://localhost:8080/realms/psw/protocol/openid-connect/certs
+          issuer-uri: http://localhost:8080/realms/psw
+  application:
+    name: Piattaforme_progetto-API
+  datasource:
+    password: Ciaodavide99
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/negozio?sessionVariables=sql_mode='NO_ENGINE_SUBSTITUTION'&jdbcCompliantTruncation=false
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+
+server:
+  #ssl:
+  #key-store-password: password_certificate
+  #key-store-type: PKCS12
+  #key-store: /home/debian/ssl-cert/certificate.p12
+  compression:
+    enabled: 'true'
+  port: '8081'
+
+
+
+keycloak:
+  realm: psw
+  auth-server-url: http://localhost:8080
+  ssl-required: external
+  resource: psw-backend
+  use-resource-role-mappings: true
+  bearer-only: true
+  #security:
+  #require-ssl: 'true'
+
