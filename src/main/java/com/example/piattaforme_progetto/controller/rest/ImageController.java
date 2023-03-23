@@ -25,6 +25,12 @@ public class ImageController {
     ImageRepository imageRepository;
     @CrossOrigin("*")
 
+
+    /*
+    The "uploadImage" function is designed to handle the upload of an image when an administrator adds a new product.
+    Its primary goal is to acquire the image and compress it. Additionally, the function performs a check to verify if
+    the image already exists in the system, and in the event that it does, it raises an exception to prevent the insertion of duplicate images.
+     */
     @PostMapping("/upload")
     public ResponseEntity.BodyBuilder uploadImage(@RequestParam("imageFile") MultipartFile file) throws IOException {
 
@@ -39,6 +45,11 @@ public class ImageController {
         return ResponseEntity.status(HttpStatus.OK);
     }
 
+
+    /*
+    The "getImage" function is designed to retrieve an image when a user views the details of a specific product (expands),
+    by reading the image data from the database and decompressing it.
+     */
     @GetMapping(path = { "/get/{imageName}" })
     public ImageModel getImage(@PathVariable("imageName") String imageName) throws IOException {
         final ImageModel retrievedImage = imageRepository.findByName(imageName);

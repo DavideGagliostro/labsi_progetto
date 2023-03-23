@@ -43,14 +43,22 @@ public class ProductsController {
         this.productRepositor = productRepositor;
     }
 
-
+    /*
+    In this case, since Keycloak is being used, specific that the role that can interact to obtain the list
+    MUST be registered and logged in.
+     */
     @RolesAllowed("backend-user")
     @GetMapping("/list")
     public List<Product> list() {
         return productService.showAllProducts();
 //                ResponseEntity(productss, HttpStatus.OK);
     }
+ /*
+  The purpose of the "Create" function is to add a product to the warehouse, with the ultimate goal of adding it to the database.
+  However, before adding it to the database, a check is performed to verify that the product being added is not already present
+  in the database. In the event that the product is already present in the database, an exception is raised.
 
+  */
     @PostMapping("/create")
     public ResponseEntity create(@RequestBody @Valid Product product) throws InterruptedException {
         System.out.println("sto creando il prodotto... "+product);
@@ -74,12 +82,13 @@ public class ProductsController {
         return productService.showAllProducts();
     }
 
-
+    /*
+    The "Search" function performs a search within the database and returns all products that contain the string that the user writes
+     */
     @RolesAllowed("backend-user")
     @GetMapping("/search/{name}")
     public List<Product> getByName(@PathVariable("name") String name) {
         System.out.println(name);
-        System.out.println("Sono qui");
         List<Product> result = productRepositor.findByNameContaining(name);
         System.out.println("Result "+result);
         return result;
@@ -98,7 +107,9 @@ public class ProductsController {
 //        return new ResponseEntity("fatto", HttpStatus.OK);
 //    }
 //
-
+    /*
+    The "delete" function, has the function of eliminating a product within the product table
+     */
     @DeleteMapping("/delete/{id}")
     public void delete(@PathVariable("id") int id) {
         Product pro=productRepositor.findById(id);
@@ -107,7 +118,10 @@ public class ProductsController {
 
 
     }
-
+    /*
+    The "expand" function, has the function of expanding the product on another page, showing more information about it
+    and allowing those with an admin role to be able to change the quantity
+     */
     @RolesAllowed("backend-user")
     @GetMapping("/expand/{id}")
     public ResponseEntity<Product> expand(@PathVariable("id") int id){
@@ -134,6 +148,21 @@ public class ProductsController {
 
 
         return new ResponseEntity<>(result, HttpStatus.OK);
+    }
+
+
+
+    /*
+    The ChangeQuantity function, allows those with an admin role to be able to change the quantity within the specific product page
+     */
+    @PostMapping("/expand/{id}/change/{quantity}")
+    public void changeQuantity(@PathVariable("id") int id,@PathVariable("quantity") int quantity) {
+        System.out.println("arrivo qui e ho id"+id+" e ho quantità "+quantity);
+        System.out.println(productRepositor.findById(id));
+        productRepositor.findById(id).setQuantity(quantity);
+        productRepositor.save(productRepositor.findById(id));
+        System.out.println(productRepositor.findById(id));
+
     }
 
 

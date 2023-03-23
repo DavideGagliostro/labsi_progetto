@@ -27,10 +27,10 @@ server:
 
 
 keycloak:
-  realm: psw
+  realm: labsi
   auth-server-url: http://localhost:8080
   ssl-required: external
-  resource: psw-backend
+  resource: psw-labsi
   use-resource-role-mappings: true
   bearer-only: true
   #security:

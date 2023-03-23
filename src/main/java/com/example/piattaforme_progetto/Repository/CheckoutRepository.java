@@ -17,6 +17,6 @@ public interface CheckoutRepository extends JpaRepository<Checkout, Integer> {
     Checkout findById(int id);
     boolean existsByBarCode(String barCode);
 
-    Checkout findByBarcodeg(String barCode);
+    List<Checkout> findByBarcodeg(String barCode);
 }
 

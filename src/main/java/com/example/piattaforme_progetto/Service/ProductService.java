@@ -28,6 +28,17 @@ public class ProductService {
         productRepository.save(product);
     }
 
+
+//    @Transactional(readOnly = false)
+//    public void updateQuantityProduct(Product product,int quantity) throws BarCodeAlreadyExistException {
+//        if ( product.getBarcodeg()!= null && productRepository.existsByBarcodeg(product.getBarcodeg()) ) {
+//            productRepository.findById(product.getId()).setQuantity();
+//        }
+//        productRepository.save(product);
+//    }
+
+
+
     @Transactional(readOnly = true)
     public List<Product> showAllProducts() {
         return productRepository.findAll();

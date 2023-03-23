@@ -17,6 +17,18 @@ import java.util.List;
 @Entity
 @Table(name = "cart", schema = "orders")
 public class Checkout {
+
+    public Checkout(String name,String barcode,String description,float price,int quantity,String barcodeg,String image,String idUser){
+
+        this.name=name;
+        this.barCode=barcode;
+        this.description=description;
+        this.price=price;
+        this.quantity=quantity;
+        this.barcodeg=barcodeg;
+        this.image=image;
+        this.iduser=idUser;
+    }
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -52,11 +64,13 @@ public class Checkout {
     @Column(name = "image", nullable = true, length = 45)
     private String image;
 
+    @Basic
+    @Column(name = "iduser", nullable = true, length = 45)
+    private String iduser;
 
+    public Checkout() {
 
-
-
-
+    }
 
 
     public String getImage() {
