@@ -1,0 +1,16 @@
+<div>
+    <app-header></app-header>
+  </div>
+  <table>
+    <tr class="title" ng-repeat="">
+        <td>Nome</td>
+        <td>Prezzo</td>
+        <td>Quantità</td>
+
+  <tr *ngFor="let al of allord">
+
+    <td>{{ al.name }}</td>
+    <td>{{ al.price }}</td>
+    <td>{{ al.quantity }}</td>
+  </tr>
+</table>

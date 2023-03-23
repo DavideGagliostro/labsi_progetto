@@ -1,0 +1,62 @@
+<div><app-header>
+    <button *ngIf="isAdmin" type="button" >Inserisci prodotto</button>
+</app-header></div>
+<h1> Ciao {{username()}}, ti sei loggato correttamente!</h1>
+
+<button (click)="logout()">Logout</button>
+
+<div>
+<mat-tab-group mat-align-tabs="center" animationDuration="1200ms">
+  <mat-tab label="I tuoi dati"> 
+    <br>
+    <h1> Qui sono presenti tutti i tuoi dati forniti in fase di registrazione</h1> <br>
+    <h2>
+        Nome: {{firstName()}} <br>
+        Cognome: {{lastName()}} <br>
+        UserName: {{username()}} <br>
+        ID: {{id()}} <br>
+        Email: {{email()}} <br>
+        Email verificata : {{emailVerified()}} <br>
+        Utente abilitato: {{enabled()}} <br>
+
+
+        isAdmin: {{admin()}}<br>
+
+         
+    </h2>
+    
+  </mat-tab>
+  <mat-tab label="Le tue autorizzazioni">
+    <br>
+    <h1>Qui sono elencate tutte le tue autorizzazioni</h1>
+    <br><br>
+    <h1>{{ruoli()}} </h1></mat-tab>
+  <mat-tab label="Token">
+    <br>
+    <h1>Qui di seguito il tuo token personale: </h1> <br>
+    <h3> {{token()}} </h3></mat-tab>
+
+    <mat-tab label="Storico ordini" >
+      <h1> Qui ci sono i tuoi ordini passati</h1>
+      <button (click)="order()">Mostra</button>
+      <table>
+        <tr class="title" ng-repeat="">
+            <td>Nome</td>
+            <td>Prezzo</td>
+            <td>Quantità</td>
+            <td>Dettagli</td>
+
+      <tr *ngFor="let product of historyP">
+        
+        <td>{{ product.name }}</td>
+        <td>{{ product.price }}</td>
+        <td>{{ product.quantity }}</td>
+        <td><button class="button-3" routerLink="/order/{{product.name}}"><i ></i> Dettagli</button></td>
+      </tr>
+    </table>
+    </mat-tab>
+
+
+</mat-tab-group>
+</div>
+

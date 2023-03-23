@@ -1,0 +1,102 @@
+
+
+
+
+.infoPalmi{
+  margin-top: auto;
+  background-color: aliceblue;
+}
+
+.infoPalmi .iPalmi{
+  background-color: rgb(0, 30, 255);
+  font-size: 18px;
+}
+
+.infoPalmi .iRende{
+  background-color: rgb(255, 0, 0);
+  font-size: 18px;
+}
+
+.infoPalmi .iRoma{
+  background-color: rgb(43, 255, 0);
+  font-size: 18px;
+}
+
+.infoPalmi .posizione{
+  position: absolute;
+
+  margin-bottom: 30%;
+}
+
+
+.infoPalmi .interno{
+  position: absolute;
+  left: 5px;
+  margin-bottom: 8%;
+}
+.infoPalmi .interno ul{
+  color:rgb(248, 0, 0);
+  
+}
+.infoPalmi .interno ul li{
+  color:rgb(0, 0, 0);
+  margin-left:30px;
+}
+
+
+.infoPalmi .orari{
+  position: absolute;
+  
+  margin-bottom: 34px;
+}
+
+.infoPalmi .orari ul{
+  color:rgb(248, 0, 0);
+  
+}
+.infoPalmi .orari ul ul{
+  color:rgb(255, 0, 0);
+  margin-right: 25p;
+
+}
+.infoPalmi .orari ul li{
+  color:rgb(0, 0, 0);
+  margin-left:30px;
+}
+
+.infoPalmi .contattaci{
+  position: absolute;
+  right: 1px;
+  margin-bottom:132px;
+}
+
+
+.infoPalmi .contattaci ul{
+  color:rgb(248, 0, 0);
+  margin-right: 1pc;
+}
+
+.infoPalmi .contattaci ul li{
+  color:rgb(0, 0, 0);
+  margin-left: 25px;
+}
+
+
+.non{
+  background-color: red;
+}
+
+  form .bP{
+    background-image: url('sedePalmi.png');
+    height: 652px;
+    
+    width: 907px;
+  }
+
+  form .bR{
+    background-image: url('sedeRende.png');
+    height: 652px;
+   
+    width: 800px;
+  }
+

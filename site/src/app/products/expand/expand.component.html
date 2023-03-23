@@ -1,0 +1,59 @@
+  <div>
+    <app-header></app-header>
+  </div>
+  <mat-grid-list class="sfondo" *ngIf="products" cols="20" rowHeight="200px">
+    
+
+    <mat-grid-tile class="immagine" colspan="8" rowspan="2">
+
+
+<div class="container row">
+    <div class="col-md-12">
+        <div *ngIf=retrievedImage>
+            <img class="fotoP" [src]="retrievedImage">
+        </div>
+    </div>
+</div>
+
+
+    </mat-grid-tile>
+    
+    <mat-grid-tile class="testo" colspan="4" rowspan="2">
+        
+        <div class="boh">
+            <h1></h1>
+        <h1 class="name">{{products.name}}</h1>
+        <h1> Prezzo : {{products.price}} € </h1> 
+        <h1> Quantità : {{products.quantity}}</h1> 
+        <h1> barcode : {{products.barcodeg}}</h1> 
+        <h1>
+                
+    <td *ngIf="isAdmin">            
+        <input type="text"  [(ngModel)]="newQuantity"  placeholder="Digita qui..." name="search">
+        <button class="button" *ngIf="isAdmin" (click)="changeQ(newQuantity)"><i class="far fa-trash-alt"></i> Modifica quantità</button>
+    </td>
+        </h1>
+
+    </div>
+        
+
+
+    
+    </mat-grid-tile>
+    <mat-grid-tile colspan="4" rowspan="2">
+        <button type="button" class="button-30" (click)="getSP(products.id)">
+            <i class="far fa-arrow-alt-circle-left"></i>Aggiungi al carrello</button>
+            
+      
+    </mat-grid-tile>
+
+
+        
+    <mat-grid-tile colspan="3" rowspan="2">  <button type="button" class="button-30" (click)="volver()">
+        <i class="far fa-arrow-alt-circle-left"></i>Torna ai prodotti</button></mat-grid-tile>
+    <mat-grid-tile class="descrizione" colspan="20" rowspan="2">
+        <div class="boh2">
+        <h2>{{products.description}}</h2>
+    </div>
+    </mat-grid-tile>
+  </mat-grid-list>

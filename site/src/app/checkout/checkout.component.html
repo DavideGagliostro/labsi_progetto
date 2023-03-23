@@ -1,0 +1,75 @@
+<div><app-header></app-header></div>
+<div>
+
+
+
+
+<mat-card class="container" fxLayout="row" fxLayoutGap>
+    <mat-card class="card-1">
+      
+      <mat-card-header>
+        <mat-card-title>Carrello</mat-card-title>
+        <mat-card-subtitle>Controlla i tuoi dati e conferma!</mat-card-subtitle>
+    </mat-card-header>
+      <mat-card-actions>
+
+        <div class="container-mt-4">
+            <div class="row">
+                <div class="col">
+                    <form  #f="ngForm" novalidate>
+                        <div class="form-group">
+
+                           
+    <table>
+        <tr class="title" ng-repeat="">
+            <td>Nome</td>
+            <td>Barcode</td>
+            <td>Quantità</td>
+            <td>Prezzo</td>
+            <td></td>
+            <td></td>
+            <td>Elimina prodotto</td>
+
+      <tr *ngFor="let product of products">
+        <td>{{ product.name }}</td>
+        <td>{{ product.barcodeg }}</td>
+        <td>{{ product.quantity }}
+                     
+
+        </td>
+        <td>{{ product.price }}</td>
+
+
+        
+
+        
+        <td><button class="button7" (click)="incr(product.id)"> + </button></td>
+        <td><button class="button7" (click)="decr(product.id)"> - </button></td>
+
+
+        <td><button class="button-3" (click)="rmFC(product.id)"> Eliminare </button></td>
+      </tr>
+    </table>
+                        </div>
+                    </form></div></div></div>
+
+
+
+      </mat-card-actions>
+      <mat-card-content>
+        <p>
+          Controlla se va tutto bene!<br><br>
+          <button type="button" class="button-85" (click)="volver()">
+            <i class="far fa-arrow-alt-circle-left"></i>Continua gli acquisti</button>
+            <br>
+            <button type="button" class="button-85"  (click)="complete()">
+              <i class="far fa-arrow-alt-circle-left"></i>Concludi ordine
+            </button>
+            
+        </p>
+      </mat-card-content>
+
+    
+    </mat-card>
+</mat-card>
+</div>

@@ -1,0 +1,27 @@
+<div>
+<app-header></app-header>
+</div>
+<br><br>
+<div>
+
+
+
+
+<table>
+    <tr class="title" ng-repeat="">
+        <td>Nome</td>
+        <td>Barcode</td>
+        <td>Informazioni</td>
+
+  <tr *ngFor="let product of products">
+
+    <td>{{ product.name }}</td>
+    <td>{{ product.barcodeg }}</td>
+
+
+
+    <td><button class="button-3" routerLink="/expand/{{product.id}}"><i ></i> Dettagli</button></td>
+
+  </tr>
+</table>
+</div>

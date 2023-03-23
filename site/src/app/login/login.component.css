@@ -1,0 +1,37 @@
+::ng-deep .mat-tab-label {
+    font-size:20px ;
+}
+
+mat-tab-group {
+    text-align: center;
+}
+
+table, th , td  {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+  }
+  table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+  }
+  table tr:nth-child(even) {
+    background-color: #ffffff;
+  }
+
+  table .title:nth-child(odd) {
+    background-color: rgb(115, 216, 115);
+    font-size: 22px;
+    text-align: center;
+  }
+
+  
+  table tr td{
+    
+    height: 80px;
+    width: 20%;
+  }
+
+
+  table {
+    margin-left: 20%;
+  }

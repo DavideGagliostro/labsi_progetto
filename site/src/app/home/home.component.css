@@ -1,0 +1,146 @@
+body{
+  background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.4)),url(../img/sfondo.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+}
+img{
+  margin-left: 1%;
+  width: 100%;
+  height: 100%;
+}
+
+.nonso{
+  background-color: blue;
+}
+
+.partner{
+  text-align: center;
+  font-size: 50px;
+}
+
+.foto1{
+  /* background-color: black; */
+  background-image: url('loghi.jpg');
+  background-repeat: no-repeat;
+  background-size:contain;
+  width: 100pc;
+  height: 30pc;
+}
+
+.container{
+  background-color: rgb(255, 255, 255);
+  width: 98vw;
+  height: 55vh;
+}
+.container .card-1 {
+  
+  width: 15vw;
+
+  display:inline-block;
+  margin-left: 0%;
+  margin-right: 2.7%;
+  transition: transform .2s; /* Animation */
+}
+
+
+
+.card-1:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.card-2:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.card-3:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+.card-4:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.card-5:hover {
+  transform: scale(1.3); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.buttonLogin{
+  margin-left: 39%;
+  font-size: 20px;
+
+}
+
+.buttonChiSiamo{
+  margin-left: 10%;
+  font-size: 20px;
+}
+
+.mat-card-title{
+  
+  font-size: 30px;
+}
+
+.buttonDoveSiamo{
+  margin-left: 20%;
+  font-size: 20px;
+}
+
+
+.buttonProdotti{
+  margin-left: 14%;
+  margin-right: 14%;
+
+  font-size: 20px;
+}
+
+
+.buttonCarrello{
+  margin-left: 25%;
+
+
+  font-size: 20px;
+}
+.card-1 {
+  width: 15vw;
+  display:inline-block;
+  margin-right: 2.7%;
+  transition: transform .3s; /* Animation */
+}
+
+
+.card-2 {
+  width: 15vw;
+  display:inline-block;
+  margin-right: 2.7%;
+  transition: transform .3s; /* Animation */
+}
+
+.card-3 {
+  width: 15vw;
+  background-color: rgb(222, 52, 52);
+  display:inline-block;
+  margin-right: 2.7%;
+  transition: transform .3s; /* Animation */
+
+}
+
+.card-4 {
+  width: 15vw;
+  display:inline-block;
+  margin-right: 2.7%;
+  transition: transform .3s; /* Animation */
+}
+
+.card-5 {
+  width: 15vw;
+  display:inline-block;
+  transition: transform .3s; /* Animation */
+  
+}
+
+
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.card {display:inline-block;}
+

@@ -1,0 +1,29 @@
+.container mat-card-title{
+    text-align: center;
+    size: 320px;
+    font-size: 30px;
+
+ 
+}
+
+
+.container{
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 10%;
+    background-color:black;
+
+}
+
+.container-mt-4 .row .col .form-group label{
+    font-size:21px;
+    margin-left: 0%;
+}
+
+
+
+.container-mt-4 .row .col .form-group .form-control{
+    height: 35px;
+    margin-left: 1%;
+   
+}

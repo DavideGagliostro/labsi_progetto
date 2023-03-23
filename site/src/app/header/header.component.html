@@ -1,0 +1,33 @@
+
+
+<div class="header">
+  <a href="home" class="logo">GoGreen</a>
+  <div class="header-right">
+    <a class="active" href="home">Home</a>
+    
+    <a href="products">Prodotti</a>
+    <a href="checkout" >Carrello</a>
+    
+      <button mat-button [matMenuTriggerFor]="info" class="mP">Info</button>
+        <mat-menu #info="matMenu" >
+          <a href="chiSiamo" mat-menu-item>Chi siamo</a>
+          <mat-divider></mat-divider>
+          <a href="doveSiamo" mat-menu-item>Dove siamo</a>
+        </mat-menu>
+        <button class="mP" *ngIf="isAdmin" type="button" onclick="location.href='create'" >Inserisci prodotto</button>  
+        <div class="ricerca"> 
+          <form action="stampa">
+            
+            <input type="text"  [(ngModel)]="nome"  placeholder="Digita qui..." name="search">
+            <button type="submit" routerLink="/search/{{nome}}"><i class="fa fa-search" aria-hidden="true"></i></button>
+            
+            <h1></h1>
+          </form>
+        </div>
+        <a class="fa fa-user" href="login">&nbsp;Login</a>
+  </div>
+</div>
+
+
+
+

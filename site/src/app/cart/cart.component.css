@@ -1,0 +1,193 @@
+*{ 
+  
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    
+  
+  }
+  
+  html {
+    height: 0%;
+  }
+  
+  
+  
+  .barra{
+  
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    
+  }
+  .header a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+    font-size: 18px; 
+    line-height: 25px;
+    border-radius: 4px;
+  }
+  
+  nav{
+    height: 7vh;
+    background-color: #252525;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top:20px;
+    padding-left:5%;
+    padding-right:1%;
+  }
+  
+  .logo{
+    color:white;
+    font-size: 40px;
+  
+  }
+  
+  nav div a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-weight: bold;
+    height: 30px;
+    
+  
+  }
+  
+  
+  nav ul li{
+    list-style-type:none;
+    display: inline-block;
+    padding:10px 20px;
+    
+  }
+  
+  
+  
+  nav ul li :hover{
+    color:rgb(184, 184, 221);
+    transition: .3s;
+  }
+  
+  
+  .barra .ricerca {
+    float:right;
+    padding: 6px;
+    margin-right: -10%;
+    margin-bottom: 8px;
+    font-size: 17px;
+  }
+  
+  
+  
+  
+ 
+  
+  .barra .button{
+    text-decoration: none;
+  
+      float: right;
+      padding: 6px 10px;
+      margin-top: 8px;
+      margin-right: 16px;
+      background-color: #252525;
+      color: white;
+      font-size: 17px;
+      border: none;
+      cursor: pointer;
+    
+  }
+  
+  .miologo{
+  
+    background-color: #252525;
+    font-size: 30px;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(-45deg,red,red,white,white,green,green);
+    background-size: 300%;
+    font-weight: 900;
+    letter-spacing: -2px;
+    -webkit-background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 6s ease-in-out infinite;
+    -moz-animation: animated_text 6s ease-in-out infinite;
+    -webkit-animation: animated_text 6s ease-in-out infinite;
+  }
+  
+  @keyframes animated_text{
+    0% {
+      background-position: 0px 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0px 50%;
+    }
+  }
+  
+  
+  
+  .miologo{
+  
+    background-color: #252525;
+    font-size: 30px;
+    transform: translate(-50%,-50%);
+    background: linear-gradient(-45deg,red,red,white,white,green,green);
+    background-size: 300%;
+    font-weight: 900;
+    letter-spacing: -2px;
+    -webkit-background-clip: text;
+    
+    -webkit-text-fill-color: transparent;
+    animation: animated_text 6s ease-in-out infinite;
+    -moz-animation: animated_text 6s ease-in-out infinite;
+    -webkit-animation: animated_text 6s ease-in-out infinite;
+  }
+  .barra .mP{
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background-color: #252525;
+    color: white;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .barra .matMenu {
+    color:white;
+    background-color: blue;
+  }
+  
+  .barra .account button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-bottom: 7px;
+    margin-right: 16px;
+    background: rgb(255, 255, 255);
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  
+  .icon-button__badge{
+    position:absolute;
+    top: -10px;
+    right: -10px;
+  }
+  
+  .carrello{
+    width: 70%;
+   height: 85%;
+   background-color: #ffffff;
+   border-radius: 20px;
+   box-shadow: 0px 25px 40px #1687d933;
+  }

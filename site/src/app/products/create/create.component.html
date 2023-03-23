@@ -1,0 +1,80 @@
+
+<app-header></app-header>
+
+<mat-card class="container" fxLayout="row" fxLayoutGap>
+    <mat-card class="card-1">
+      
+      <mat-card-header>
+        <mat-card-title>Inserisci qui il tuo nuovo prodotto</mat-card-title>
+        <mat-card-subtitle>Inserisci tutti i dati!</mat-card-subtitle>
+    </mat-card-header>
+      <mat-card-actions>
+
+
+
+    
+
+        <div class="container-mt-4">
+            <div class="row">
+                <div class="col">
+                    <form (ngSubmit)="onCreate()" #f="ngForm" novalidate>
+                        <div class="form-group">
+
+                            <label>Nome: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control" name="ProductNamde" id="ProductdName" align="center"
+                            [(ngModel)]="ProductName" required autocomplete="off">
+                        </div><br>
+                        <div class="form-group">
+                            <label for="ProductName">Descrizione:</label>
+                            <input type="text" class="form-control" name="ProductDescription" id="ProductNdame"
+                            [(ngModel)]="description" required autocomplete="off">
+                        </div><br>
+                        <div class="form-group">
+                            <label for="ProductPrice">Prezzo: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control" name="ProductPrice" id="ProductPrice"
+                            [(ngModel)]="price" required autocomplete="off">
+                        </div><br>
+        
+                        <div class="form-group">
+                            <label for="ProductBarcodeg">Barcode: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control" name="ProductBarcodeg" id="ProductBarcodeg"
+                            [(ngModel)]="barcodeg" required autocomplete="off">
+                        </div><br>
+        
+                        <div class="form-group">
+                            <label for="ProductQuantity">Quantità: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                            <input type="text" class="form-control" name="ProductQuantity" id="ProductQuantity"
+                            [(ngModel)]="quantity" required autocomplete="off">
+                        </div>
+                        
+                            <div class="container row">
+                                <div class="col-md-6">
+                                    <input type="file" (change)="onFileChanged($event)">
+                                    </div>
+                                </div>
+
+
+                        <button type="submit" class="btn btn-outline-success btn-block "  [disabled]="!f.valid">
+                            <i class="fas fa-plus-circle"></i>Crea</button>
+                            <button type="button" class="btn btn-outline-primary btn-block" (click)="volver()">
+                                <i class="far fa-arrow-alt-circle-left"></i>Elimina</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+
+
+
+
+
+      </mat-card-actions>
+      <mat-card-content>
+        <p>
+          Per attivare il bottone crea, inserisci tutti i dati
+        </p>
+      </mat-card-content>
+
+    
+    </mat-card>
+</mat-card>

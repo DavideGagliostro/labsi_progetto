@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>menu</title>
+    <link rel="stylesheet" type="text/css" href="cart.component.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+  </head>
+
+
+
+
+    <div class="barra">
+      <nav>
+      <div class="miologo" >
+        <a class=miologo href="home">ShopGreen&nbsp;</a>
+      </div>
+      <ul>
+        
+
+        
+
+        
+        <li>
+          <a href="products" class="button">products</a>
+        </li>
+
+
+        <li>
+          <a href="checkout" class="button">carrello</a>
+        </li>
+
+
+        
+        <!-- pulsante prodotti-->
+        
+      <!--pulsante info con chi siamo e dove siamo-->
+      <li>
+      <button mat-button [matMenuTriggerFor]="info" class="mP">Info</button>
+        <mat-menu #info="matMenu" >
+          <a href="chiSiamo" mat-menu-item>Chi siamo</a>
+          <mat-divider></mat-divider>
+          <a href="doveSiamo" mat-menu-item>Dove siamo</a>
+        </mat-menu>
+      </li>
+
+      
+
+
+
+    
+
+      </ul>
+      
+
+
+    <div>
+      <button *ngIf="" type="button" onclick="location.href='create'" >Inserisci prodotto</button>
+    </div>
+      
+      <div class="ricerca"> 
+        <form action="">
+          
+          <input type="text" placeholder="Digita qui..." name="search">
+          <button type="submit"><i class="fa fa-search"  aria-hidden="true"></i></button>
+        </form>
+      </div>
+      <div class="account"> 
+        <form action="">
+          <button type="account" onclick="location.href='login'"><i class="fa fa-user"  aria-hidden="true"></i>
+
+        
+            <span class="material-icons"></span>
+
+          </button>
+        </form>
+      </div>
+    </nav>
+    </div>
+
+
+</html>
